@@ -9,6 +9,7 @@ bool check = false;
 ThemeData _darkTheme = ThemeData(
   brightness: Brightness.dark,
   primaryColor: Color.fromARGB(255, 250, 250, 250),
+  primarySwatch: Colors.amber,
   focusColor: Colors.amber,
 );
 
@@ -16,6 +17,7 @@ ThemeData _lightTheme = ThemeData(
   brightness: Brightness.light,
   primaryColor: Color.fromARGB(255, 83, 84, 85),
   focusColor: Colors.purple,
+  primarySwatch: Colors.purple ,
   accentColor: Colors.purple,
 );
 
