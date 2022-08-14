@@ -13,8 +13,8 @@ class Input extends StatelessWidget {
   ThemeData darkTheme;
   double wid;
   double h;
-  Input(this.valid , this.wid, this.h ,this.hint, this.text, this.icon, this.light, this.lightTheme,
-      this.darkTheme);
+  Input(this.valid, this.wid, this.h, this.hint, this.text, this.icon,
+      this.light, this.lightTheme, this.darkTheme);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +22,6 @@ class Input extends StatelessWidget {
     double _height = MediaQuery.of(context).size.height;
     return Container(
       width: wid,
-      
       child: Column(
         children: [
           Padding(
@@ -38,7 +37,9 @@ class Input extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: TextFormField(
               validator: valid,
-              style: TextStyle(height: h ,),
+              style: TextStyle(
+                height: h,
+              ),
               decoration: InputDecoration(
                   hintText: hint,
                   focusedBorder: OutlineInputBorder(
@@ -66,9 +67,7 @@ class Input extends StatelessWidget {
                     borderSide: BorderSide(color: Colors.red, width: 2.0),
                   ),
                   prefixIcon: icon,
-                  errorStyle: TextStyle(
-                    color: Colors.red
-                  ),
+                  errorStyle: TextStyle(color: Colors.red),
                   hintStyle: TextStyle(
                     fontSize: 15,
                   )),

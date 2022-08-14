@@ -61,11 +61,11 @@ class _MyAppState extends State<MyApp> {
                 child: Column(
                   children: [
                     Input(((value) {
-                            if (value!.isEmpty || value == null )
-                              return ('enter a company name');
-                            else
-                              return null;
-                          }),_width * 0.95, 1, "your company", "company name",
+                      if (value!.isEmpty || value == null)
+                        return ('enter a company name');
+                      else
+                        return null;
+                    }), _width * 0.95, 1, "your company", "company name",
                         Icon(Icons.apartment), light, _lightTheme, _darkTheme),
                     ResponsiveRowColumn(
                       rowPadding: EdgeInsets.fromLTRB(30, 15, 30, 30),
@@ -77,9 +77,8 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         ResponsiveRowColumnItem(
                           rowFlex: 1,
-                          child: Input(
-                            ((value) {
-                            if (value!.isEmpty || value == null )
+                          child: Input(((value) {
+                            if (value!.isEmpty || value == null)
                               return ('enter a name');
                             else
                               return null;
@@ -95,9 +94,10 @@ class _MyAppState extends State<MyApp> {
                         ),
                         ResponsiveRowColumnItem(
                           rowFlex: 1,
-                          child: Input(
-                            ((value) {
-                            if (value!.isEmpty || value == null ||RegExp(r'^[0-9]+$').hasMatch(value))
+                          child: Input(((value) {
+                            if (value!.isEmpty ||
+                                value == null ||
+                                RegExp(r'^[0-9]+$').hasMatch(value))
                               return ('enter an number');
                             else
                               return null;
@@ -122,16 +122,15 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         ResponsiveRowColumnItem(
                           rowFlex: 2,
-                          child: Input(
-                            ((value) {
-                          if (value!.isEmpty ||
-                              value == null ||
-                              !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-                                  .hasMatch(value))
-                            return ('email is wrong');
-                          else
-                            return null;
-                        }),
+                          child: Input(((value) {
+                            if (value!.isEmpty ||
+                                value == null ||
+                                !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
+                                    .hasMatch(value))
+                              return ('email is wrong');
+                            else
+                              return null;
+                          }),
                               _width * 0.95,
                               1,
                               "Email Address",
@@ -143,9 +142,10 @@ class _MyAppState extends State<MyApp> {
                         ),
                         ResponsiveRowColumnItem(
                           rowFlex: 1,
-                          child: Input(
-                            ((value) {
-                            if (value!.isEmpty || value == null ||RegExp(r'^[0-9]+$').hasMatch(value))
+                          child: Input(((value) {
+                            if (value!.isEmpty ||
+                                value == null ||
+                                RegExp(r'^[0-9]+$').hasMatch(value))
                               return ('enter an pin');
                             else
                               return null;
@@ -162,12 +162,12 @@ class _MyAppState extends State<MyApp> {
                       ],
                     ),
                     Input(((value) {
-                            if (value!.isEmpty || value == null )
-                              return ('enter an address');
-                            else
-                              return null;
-                          }), _width * 0.95, 3, "your address", "address",
-                        Icon(null), light, _lightTheme, _darkTheme),
+                      if (value!.isEmpty || value == null)
+                        return ('enter an address');
+                      else
+                        return null;
+                    }), _width * 0.95, 3, "your address", "address", Icon(null),
+                        light, _lightTheme, _darkTheme),
                     ResponsiveRowColumn(
                       rowPadding: EdgeInsets.fromLTRB(30, 0, 30, 30),
                       layout:
@@ -177,9 +177,8 @@ class _MyAppState extends State<MyApp> {
                       children: [
                         ResponsiveRowColumnItem(
                           rowFlex: 1,
-                          child: Input(
-                            ((value) {
-                            if (value!.isEmpty || value == null )
+                          child: Input(((value) {
+                            if (value!.isEmpty || value == null)
                               return ('enter a city');
                             else
                               return null;
@@ -196,11 +195,11 @@ class _MyAppState extends State<MyApp> {
                         ResponsiveRowColumnItem(
                           rowFlex: 1,
                           child: Input(((value) {
-                            if (value!.isEmpty || value == null )
+                            if (value!.isEmpty || value == null)
                               return ('enter a state');
                             else
                               return null;
-                          }),_width * 0.95, 1, "your state", "state",
+                          }), _width * 0.95, 1, "your state", "state",
                               Icon(Icons.flag), light, _lightTheme, _darkTheme),
                         ),
                       ],
@@ -225,13 +224,12 @@ class _MyAppState extends State<MyApp> {
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 10, 0, 0),
                       child: Visibility(
-                        child: Input(
-                          ((value) {
-                            if (value!.isEmpty || value == null )
-                              return ('enter a billing address');
-                            else
-                              return null;
-                          }),
+                        child: Input(((value) {
+                          if (value!.isEmpty || value == null)
+                            return ('enter a billing address');
+                          else
+                            return null;
+                        }),
                             _width * 0.95,
                             3,
                             "enter billing address",
@@ -249,36 +247,34 @@ class _MyAppState extends State<MyApp> {
               ),
             ),
             Align(
-              alignment: Alignment.bottomLeft,
-              child : Container(
-              
-              height: 200,
-              child: Row(children: [
-                SizedBox(
-                  height: 40,
-                  width: 90,
-                  
-                  child: ElevatedButton(
-                      onPressed: () =>
-                          {if (_formkey.currentState!.validate()) {}},
-                      style: ElevatedButton.styleFrom(primary: Colors.grey),
-                      child: Text("prev")),
-                ),
-                SizedBox(
-                  height: 40,
-                  width: 90,
-                  child: ElevatedButton(
-                    onPressed: () =>
-                        {if (_formkey.currentState!.validate()) {}},
-                    style: ElevatedButton.styleFrom(
-                        primary: light
-                            ? _lightTheme.focusColor
-                            : _darkTheme.focusColor),
-                    child: Text("Next"),
-                  ),
-                )
-              ]),
-            ))
+                alignment: Alignment.bottomLeft,
+                child: Container(
+                  height: 200,
+                  child: Row(children: [
+                    SizedBox(
+                      height: 40,
+                      width: 90,
+                      child: ElevatedButton(
+                          onPressed: () =>
+                              {if (_formkey.currentState!.validate()) {}},
+                          style: ElevatedButton.styleFrom(primary: Colors.grey),
+                          child: Text("prev")),
+                    ),
+                    SizedBox(
+                      height: 40,
+                      width: 90,
+                      child: ElevatedButton(
+                        onPressed: () =>
+                            {if (_formkey.currentState!.validate()) {}},
+                        style: ElevatedButton.styleFrom(
+                            primary: light
+                                ? _lightTheme.focusColor
+                                : _darkTheme.focusColor),
+                        child: Text("Next"),
+                      ),
+                    )
+                  ]),
+                ))
           ],
         ),
       ),
